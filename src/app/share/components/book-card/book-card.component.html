@@ -1,8 +1,9 @@
-<div class="card rgb" ngTilt [glare]="true">
-  <div class="card-image"></div>
-  <div class="card-text">
-    <span class="date">4 days ago</span>
-    <h2>Post One</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, facilis ex. Laboriosam laborum nulla similique voluptates animi voluptate ipsum qui.</p>
+<a [href]="domain + book.downloadUrl">
+  <div class="card rgb" ngTilt [perspective]="500" [glare]="true">
+    <div [style.background-image]="'linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url(' + book.cover + ')'" class="card-image"></div>
+    <div class="card-text">
+      <span class="date">{{ book.author }}</span>
+      <p>{{ book.title }}</p>
+    </div>
   </div>
-</div>
+</a>

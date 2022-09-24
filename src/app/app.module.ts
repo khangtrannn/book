@@ -6,11 +6,13 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgTiltModule } from '@geometricpanda/angular-tilt';
+import { BookListComponent } from './share/components/book-list/book-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookCardComponent
+    BookCardComponent,
+    BookListComponent,
    ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 .card {
   display: grid;
   grid-template-columns: 300px;
-  grid-template-rows: 210px 250px 20px;
+  grid-template-rows: 210px 175px 20px;
   grid-template-areas: "image" "text" "stats";
 
   border-radius: 18px;
@@ -17,9 +17,6 @@
 
   &-image {
     grid-area: image;
-    background:
-      linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),  // fade-in effect for image
-      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCIikiZ6ox1O0nKRFits52PcSulfJzv7w_TbaqTxGw8KnIytOpsyb_m74b1f0vgI6HNQc&usqp=CAU');
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
