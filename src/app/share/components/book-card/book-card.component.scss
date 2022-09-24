@@ -10,13 +10,9 @@
   font-family: roboto;
   text-align: center;
   width: fit-content;
-  transition: 0.5 ease;
   cursor: pointer;
-
-  &:hover {
-    transform: scale(1.2);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-  }
+  transform-style: preserve-3d;
+  perspective: 1000px;
 
   &-image {
     grid-area: image;
@@ -29,6 +25,7 @@
   &-text {
     grid-area: text;
     margin: 25px;
+    transform: translateZ(30px);
 
     .date {
       color: rgb(255, 7, 110);

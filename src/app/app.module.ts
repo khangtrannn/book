@@ -5,6 +5,7 @@ import { BookCardComponent } from './share/components/book-card/book-card.compon
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgTiltModule } from '@geometricpanda/angular-tilt';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    NgTiltModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
