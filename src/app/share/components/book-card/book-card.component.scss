@@ -1,14 +1,15 @@
 .card {
   display: grid;
   grid-template-columns: 300px;
-  grid-template-rows: 210px 210px 80px;
+  grid-template-rows: 210px 250px 20px;
   grid-template-areas: "image" "text" "stats";
 
   border-radius: 18px;
-  background: white;
+  background: #1d1d1d;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  color: white;
   font-family: roboto;
-  text-align: center;
+  text-align: justify;
   width: fit-content;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -16,7 +17,9 @@
 
   &-image {
     grid-area: image;
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCIikiZ6ox1O0nKRFits52PcSulfJzv7w_TbaqTxGw8KnIytOpsyb_m74b1f0vgI6HNQc&usqp=CAU');
+    background:
+      linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%),  // fade-in effect for image
+      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCIikiZ6ox1O0nKRFits52PcSulfJzv7w_TbaqTxGw8KnIytOpsyb_m74b1f0vgI6HNQc&usqp=CAU');
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
@@ -35,7 +38,7 @@
 
     p {
       color: grey;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 300;
     }
 
@@ -83,4 +86,33 @@
       }
     }
   }
+}
+
+.rgb::after {
+  content:"";
+  background: linear-gradient(45deg,
+  #ff0000 0%,
+  #ff9a00 10%,
+  #d0de21 20%,
+  #4fdc4a 30%,
+  #3fdad8 40%,
+  #2fc9e2 50%,
+  #1c7fee 60%,
+  #5f15f2 70%,
+  #ba0cf8 80%,
+  #fb07d9 90%,
+  #ff0000 100%  )
+  repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+  animation: rgb 6s linear infinite;
+  border-radius: 16px;
+  filter: blur(8px);
+  transform: translateZ(-1px); // or z-index
+}
+
+@keyframes rgb {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
